@@ -7,7 +7,7 @@ mod authentication {
         password_hash: u64,
     }
 
-    impl User{
+    impl User {
         pub fn new(username: &str, password: &str) -> User {
             User {
                 username: username.to_string(),
