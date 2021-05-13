@@ -1,5 +1,5 @@
 mod text_processing {
-    
+
     pub mod letters {
         pub fn count_letters(text: &str) -> usize {
             text.chars().filter(|ref c| c.is_alphabetic()).count()
@@ -28,5 +28,4 @@ fn main() {
 
     assert_eq!(count_letters_and_numbers("4 Privet Drive"), (11, 1));
     println!("{:?}", count_letters_and_numbers("4 Privet Drive"));
-
 }
