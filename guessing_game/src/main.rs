@@ -38,7 +38,8 @@ fn main() {
         if 0.eq(&rest_tries) {
             println!("You lost.");
             break;
-        };
-        println!("You have {} times now", rest_tries);
+        } else {
+            println!("You have {} times now", rest_tries)
+        }
     }
 }
