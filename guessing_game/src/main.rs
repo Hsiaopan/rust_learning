@@ -3,10 +3,11 @@ use std::io;
 use rand::Rng;
 
 fn main() {
-    println!("Guess the number!");
+    const MAX_TRIES: u32 = 5;
+    println!("Guess the number!.You only have {} times", MAX_TRIES);
 
     let secret_number = rand::thread_rng().gen_range(1..101);
-    let mut guess_try: u32 = 0;
+    let mut rest_tries: u32 = MAX_TRIES;
 
     loop {
         println!("Please input your guess.");
@@ -22,17 +23,22 @@ fn main() {
             Err(_) => continue,
         };
 
-        guess_try += 1;
+        rest_tries -= 1;
         println!("You guessed: {}", guess);
 
         match guess.cmp(&secret_number) {
             std::cmp::Ordering::Greater => println!("Too big!"),
             std::cmp::Ordering::Less => println!("Too small!"),
             std::cmp::Ordering::Equal => {
-                println!("You win!, total tries: {}", guess_try);
+                println!("You win!, total tries: {}", MAX_TRIES - rest_tries);
                 break;
             }
         }
-        
+
+        if 0.eq(&rest_tries) {
+            println!("You lost.");
+            break;
+        };
+        println!("You have {} times now", rest_tries);
     }
 }
