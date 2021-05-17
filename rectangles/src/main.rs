@@ -4,7 +4,8 @@ struct Rectangle {
     height: u32,
 }
 
-impl Rectangle {   // 定义方法
+impl Rectangle {
+    // 定义方法
     fn area(&self) -> u32 {
         self.width * self.height
     }
@@ -22,11 +23,11 @@ fn main() {
 
     let rec2 = Rectangle {
         width: 35,
-        height:48,
+        height: 48,
     };
 
     let rec3 = Rectangle {
-        width:28,
+        width: 28,
         height: 45,
     };
 
