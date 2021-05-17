@@ -35,9 +35,9 @@ fn main() {
 
     println!(
         "The area of the rectangle is {} square pixels.",
-        rec1.area()
+        rec1.area() // 隐式 不可变借用
     );
 
-    println!("Can rec1 hold rec2? {}", rec1.can_hold(&rec2));
+    println!("Can rec1 hold rec2? {}", rec1.can_hold(&rec2)); // 不可变借用
     println!("Can rec1 hold rec3? {}", rec1.can_hold(&rec3));
 }
