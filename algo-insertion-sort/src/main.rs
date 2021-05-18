@@ -11,5 +11,8 @@ pub fn insertion_sort(vectors: &mut Vec<usize>) -> &Vec<usize>{
 
 fn main() {
     let mut vec1 = vec![1, 5, 7, 3, 9, 11, 2, 3, 6, 12, 8];
-    println!("{:?}", insertion_sort(&mut vec1));
+    println!("{:?}", vec1);
+
+    let vec2 = insertion_sort(&mut vec1);
+    println!("{:?}", vec2);
 }
