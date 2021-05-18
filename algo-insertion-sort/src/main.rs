@@ -1,4 +1,4 @@
-pub fn insertion_sort(vectors: &mut Vec<usize>) -> &Vec<usize>{
+pub fn insertion_sort(vectors: &mut Vec<usize>) -> &Vec<usize> {
     for i in 1..vectors.len() {
         let mut j = i;
         while j > 0 && vectors[j - 1] > vectors[j] {
