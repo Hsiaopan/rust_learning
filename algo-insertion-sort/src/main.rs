@@ -1,17 +1,18 @@
-use std::usize;
-
-pub fn insertion_sort(arr: &mut Vec<usize>) {
-    for i in 1..arr.len() {
-        let (mut p, v) = (i, arr[i]);
-        while p > 0 && arr[p - 1] > arr[p] {
-            arr[p] = arr[p-1];
-            p -= 1;
+pub fn insertion_sort(vectors: &mut Vec<usize>) -> &Vec<usize> {
+    for i in 1..vectors.len() {
+        let mut j = i;
+        while j > 0 && vectors[j - 1] > vectors[j] {
+            vectors.swap(j - 1, j);
+            j -= 1;
         }
-        arr[p] = v;
     }
+    vectors
 }
 
 fn main() {
-    let mut arr = vec![1, 5, 7, 3, 9, 11, 2, 3, 6, 12, 8];
-    println!("{:?}",insertion_sort(&mut arr));
+    let mut vec1 = vec![1, 5, 7, 3, 9, 11, 2, 3, 6, 12, 8];
+    println!("{:?}", vec1);
+
+    let vec2 = insertion_sort(&mut vec1);
+    println!("{:?}", vec2);
 }
