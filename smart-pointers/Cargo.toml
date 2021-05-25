@@ -1,0 +1,8 @@
+[workspace]
+members = [
+    "boxes",
+    "deref-trait",
+    "drop-trait",
+    "refcounted",
+    "refcell",
+]
