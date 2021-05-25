@@ -1,4 +1,5 @@
 use std::{env, error::Error, fs};
+
 pub struct Config {
     pub query: String,
     pub filename: String,
