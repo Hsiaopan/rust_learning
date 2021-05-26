@@ -1,7 +1,7 @@
-use std::ops::Deref;
-
 #[cfg(test)]
 mod tests;
+
+use std::ops::Deref;
 
 struct MyBox<T>(T);
 
