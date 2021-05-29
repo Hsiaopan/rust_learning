@@ -8,6 +8,8 @@ version = "0.1.0"
 
 [dependencies]
 messages-passing = {path = "./messages-passing"}
+shared-state = {path = "./shared-state"}
 
 [workspace]
-members = ["messages-passing"]
+members = ["messages-passing","shared-state"]
+
