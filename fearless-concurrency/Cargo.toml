@@ -9,7 +9,8 @@ version = "0.1.0"
 [dependencies]
 messages-passing = {path = "./messages-passing"}
 shared-state = {path = "./shared-state"}
+extensible-concurrency = {path = "./extensible-concurrency"}
 
 [workspace]
-members = ["messages-passing","shared-state"]
+members = ["messages-passing","shared-state","extensible-concurrency"]
 
